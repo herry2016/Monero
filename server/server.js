@@ -9,7 +9,8 @@ const app = express();
 const router = express.Router();
 
 port = 9001;
-app.use(express.static(path.resolve(__dirname + '../client')))
+app.use(express.static(path.resolve(__dirname, '../client')))
+
 
 
 router.get('/', function(req, res) {
@@ -19,6 +20,29 @@ router.use(function(req, res, next) {
   console.log('Middleware router was ran');
   next();
 });
+
+
+
+router.route('/login')
+.post(function(req, res){ 
+  //login authentication here
+})
+.get(function(req, res) {
+  //render login page
+})
+
+
+router.route('/signup')
+.post(function(req, res) {
+
+let username = req.body.username;
+let password = req.body.password;
+let email = req.body.email;
+
+})
+.get(function(req, res) {
+  //render signup page
+})
 
 //this is a test
 
