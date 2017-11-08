@@ -1,0 +1,73 @@
+﻿Team Name: Monero Miner
+
+
+Team Roles:
+* Product Owner
+   * Alex
+* Scrum Master
+   * Ruslan
+* Dev Team
+   * Jay
+
+
+
+
+Product Idea:
+* Have product owner give the elevator pitch for the idea
+   * Idea Name
+      * Monero Browser Miner
+            * Users will keep browser running in order to sacrifice their processing power to solve virtual currency algorithms
+            * The mined monero will be sent to target wallet
+* Get a 1-5 rating of how bought in each team member is for the idea
+   * Alex - 5
+   * Ruslan - 4
+   * Jay - 2
+
+
+Tech Stack:
+* React
+* NodeJS
+* Express
+* SQLITE3
+* Sequelize
+* May add more
+
+
+MVP Feature List:
+* Mine Monero
+* View Leaderboards
+* Choose from List of Charities 
+* Accounts
+* Authentication
+
+
+MVP+ Feature List:
+* tbd
+
+
+
+
+MVP Mockups:
+* Have the team demonstrate the user flow for the application’s views and functionality
+
+
+Individual Feature Responsibility:
+* Ruslan
+   * Setup Leaderboards
+   * Database
+* Jay
+   * User Accounts
+   * Authentication 
+* Alex
+   * Setup Monero Miner
+   * Server 
+Agreement on Work Days:
+* We group and we work together, but on separate files
+
+
+
+
+Team Next Steps:
+* Ask the Product Owner to create a Trello (trello.com) that includes a list of the MVP features with each team member attached. The Product Owner should also invite the senior TM and project check-in HiR to the Trello Board.
+* Ask the Scrum Master to invite the senior TM and project check-in HiR to the github organization.
+* Begin modeling your application’s data needs. This includes creating a schema for your data entities, selecting the suitable database, and building out the routes, models, and controllers that support the app layer of your application.
