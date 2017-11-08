@@ -23,9 +23,12 @@ class App extends Component {
   }
 
   render() {
-
+    var sectionStyle = {
+      height: '100vh',
+      backgroundImage: "url('http://www.publicdomainpictures.net/pictures/190000/velka/black-background-1468370534d5s.jpg')",
+    }
     return (
-      <div>
+      <div id="main" style={sectionStyle}>
         <div>
           <Button id="form" bsStyle="default" bsSize="small" onClick={this.handleClickButton.bind(null, 3)}>Login</Button>
           <Button id="form" bsStyle="default" bsSize="small" onClick={this.handleClickButton.bind(null, 4)}>Signup</Button>

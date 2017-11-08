@@ -14,10 +14,8 @@ export default class View1 extends Component {
 
   render() {
     var sectionStyle = {
-      width: '100%',
-      height: '100%',
+      height: '100vh',
       backgroundImage: "url('https://www.monero.how/photos/monero-coin7-1024x909.jpg')",
-      repeat: "no-repeat"
     }
     return (
       
