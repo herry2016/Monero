@@ -32,8 +32,8 @@ class App extends Component {
           <Button bsStyle="info" bsSize="large" onClick={this.handleClickButton2}>View2</Button>
         </div>
         <div>
-          {this.state.viewing === 1 ? <div><View1 /></div> : null}
-          {this.state.viewing === 2 ? <div><View2 /></div> : null}
+          {/* {this.state.viewing === 1 ? <div><View1 /></div> : null}
+          {this.state.viewing === 2 ? <div><View2 /></div> : null} */}
         </div>
       </div>
     )
