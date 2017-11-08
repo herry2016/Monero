@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { Button } from 'react-bootstrap'
 
 
-class View2 extends Component {
+export default class View2 extends Component {
   constructor(props) {
     super(props);
 
