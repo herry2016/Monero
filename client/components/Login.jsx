@@ -30,10 +30,10 @@ export default class Login extends Component {
       <div>
         <div>
           {/* <Form horizontal> */}
-          <FormGroup>
-            <div><label> Username: <input type="text" name="username" value={this.state.username} onChange={this.handleChange} /></label></div>
-            <div><label> Password: <input type="text" name="password" value={this.state.password} onChange={this.handleChange} /></label></div>
-            <div><input type="submit" value="Login" onClick={this.handleClickSubmit} /></div>
+          <FormGroup id="login">
+            <div id="credentials"><label> Username: <input type="text" name="username" value={this.state.username} onChange={this.handleChange} /></label></div>
+            <div id="credentials"><label> Password: <input type="text" name="password" value={this.state.password} onChange={this.handleChange} /></label></div>
+            <div ><input type="submit" value="Login" onClick={this.handleClickSubmit} /></div>
           </FormGroup>
           {/* </Form> */}
         </div>
