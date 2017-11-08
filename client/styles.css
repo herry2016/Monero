@@ -1,3 +1,9 @@
 #form{
   float: right;
+
+}
+#viewOne{
+  height: 80vh;
+  width: auto;
+  border: solid;
 }
