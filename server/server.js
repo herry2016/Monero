@@ -6,7 +6,7 @@ const db = require('../database/db.js');
 const app = express();
 const router = express.Router();
 
-port = 3306;
+let port = 3306;
 
 app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
@@ -30,6 +30,7 @@ router.route('/signup')
 let username = req.body.username;
 let password = req.body.password;
 let email = req.body.email;
+console.log(username)
 
   // let user; //Fill values from in from frontend
   // let mail;
