@@ -13,10 +13,14 @@ export default class View2 extends Component {
   }
 
   render() {
-
+    var sectionStyle = {
+      height: '100vh',
+      backgroundImage: "url('https://secure.img1-ag.wfcdn.com/im/92318338/resize-h800%5Ecompr-r85/3600/36006914/Homebase%20High%20Density%20Foam%205%20Step%20Pet%20Stair.jpg')",
+    }
     return (
-      <div>
-        View2
+      <div id="viewTwo" style={sectionStyle}>
+        <h2>Leaderboard</h2>
+        <div id="entries"></div>
       </div>
     )
   }

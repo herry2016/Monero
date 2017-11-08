@@ -4,14 +4,27 @@
 
 }
 #viewOne{
-  height: 80vh;
-  width: auto;
+  height: 90vh;
   border: solid;
-  background-repeat: "no-repeat"
+  background-repeat: "no-repeat";
 }
 
 #main{
   height: 100vh;
   width: auto;
-  
+}
+#contributions{
+  border: solid red;
+  width: 450px;
+}
+#entries{
+  height: 400px;
+  border: solid red;
+  width: 200px;
+  overflow: auto;
+  text-align: center;
+}
+#leaderboard{
+  height: 100vh;
+  width: auto;
 }

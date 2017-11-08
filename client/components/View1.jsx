@@ -15,13 +15,13 @@ export default class View1 extends Component {
   render() {
     var sectionStyle = {
       height: '100vh',
-      backgroundImage: "url('https://www.monero.how/photos/monero-coin7-1024x909.jpg')",
+      backgroundImage: "url('https://previews.123rf.com/images/albund/albund1708/albund170800115/84959632-A-physical-monero-cryptocurrency-in-gold-and-silver-coin-form-on-a-dark-studio-background-3D-render-Stock-Photo.jpg')",
     }
     return (
       
       <div id="viewOne" style={sectionStyle}>
        
-        View1
+        <h1 id="contributions"> contributed $0.003</h1>
       </div>
     )
   }
