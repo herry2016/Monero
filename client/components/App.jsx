@@ -5,7 +5,7 @@ import View1 from './View1.jsx'
 import View2 from './View2.jsx'
 import Login from './Login.jsx'
 import Signup from './Signup.jsx'
-
+//test comment 
 class App extends Component {
   constructor(props) {
     super(props);
