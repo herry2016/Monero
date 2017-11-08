@@ -39,13 +39,19 @@ let username = req.body.username;
 let password = req.body.password;
 let email = req.body.email;
 
+  // let user; //Fill values from in from frontend
+  // let mail;
+  // let pass;
+  db.Users.create({
+    username: username,
+    password: password,
+    email: email,
+    total: 0
+  })
 })
 .get(function(req, res) {
   //render signup page
 })
-
-//this is a test
-
 
 
 app.use('/main', router);
