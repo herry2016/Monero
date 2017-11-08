@@ -28,3 +28,12 @@
   height: 100vh;
   width: auto;
 }
+#login{
+  text-align: center;
+}
+#signup{
+  text-align: center;
+}
+#credentials{
+  color: red;
+}
