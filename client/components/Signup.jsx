@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom'
 import { Button } from 'react-bootstrap'
 
 
-export default class View1 extends Component {
+export default class Signup extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      
+
     };
   }
 
@@ -16,7 +16,7 @@ export default class View1 extends Component {
 
     return (
       <div>
-        View1
+        Signup
       </div>
     )
   }
