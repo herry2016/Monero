@@ -1,3 +1,4 @@
+
 #form{
   float: right;
 
@@ -6,4 +7,11 @@
   height: 80vh;
   width: auto;
   border: solid;
+  background-repeat: "no-repeat"
+}
+
+#main{
+  height: 100vh;
+  width: auto;
+  
 }
