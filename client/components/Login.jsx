@@ -21,7 +21,7 @@ export default class Login extends Component {
   }
 
   handleClickSubmit() {
-    axios.post('http://127.0.0.1:3306/main/login', this.state)
+    axios.post('/main/login', this.state)
       .then(response => console.log('new login request ===== ', this.state))
   }
   render() {

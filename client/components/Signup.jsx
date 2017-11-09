@@ -26,7 +26,7 @@ export default class Signup extends Component {
   }
 
   handleClickSubmit() {
-    axios.post('http://127.0.0.1:3306/main/signup', this.state)
+    axios.post('/main/signup', this.state)
       .then(response => console.log('new signup request ===== ', this.state))
   }
 
