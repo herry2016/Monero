@@ -31,14 +31,22 @@ let username = req.body.username;
 let password = req.body.password;
 let email = req.body.email;
 
-console.log('*****************************')
-console.log(username)
-console.log(password)
-console.log(email)
-  // let user; //Fill values from in from frontend
-  // let mail;
-  // let pass;
-  db.Users.create({
+// console.log(username)
+// console.log(password)
+// console.log(email)
+
+  let userFound = false;
+  db.Users.findAll().then(user => {
+    if(user.username === req.body.username && user.password === req.body.password){
+      userFound = true;
+    }
+  })
+  
+  if(userFound){
+    res.send(false);
+  } else {
+    
+    db.Users.create({
     username: username,
     password: password,
     email: email,
@@ -46,13 +54,16 @@ console.log(email)
     totaltime: 0,
     totalamount: 0
   })
-  const sendBack = {
+  let sendBack = {
     username: username,
     totalhashes: 0,
     totaltime: 0,
     totalamount: 0
   }
-  res.send(sendBack)
+    res.send(sendBack)
+
+  }
+  
 })
 .get(function(req, res) {
   //render signup page
@@ -62,8 +73,19 @@ console.log(email)
 
 router.route('/login')
 .post(function(req, res){ 
-  //login authentication here
+
+  db.Users.findAll().then(user => {
+    if(user.username === req.body.username && user.password === req.body.password){
+      res.send(user);
+    }
+    else{
+      res.send(false)
+    }
+  })
+  
+  
 })
+
 .get(function(req, res) {
   //render login page
 })
