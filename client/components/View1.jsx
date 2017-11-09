@@ -34,7 +34,7 @@ export default class View1 extends Component {
     return (
       
       <div id="viewOne" style={sectionStyle}>
-        <Button bsStyle="danger" bsSize="large" onClick={this.checkmine}>check</Button>
+        {/* <Button bsStyle="danger" bsSize="large" onClick={this.checkmine}>check</Button> */}
         <h1 id="contributions">{this.state.total}</h1>
       </div>
     )
