@@ -22,7 +22,9 @@ export default class Login extends Component {
 
   handleClickSubmit() {
     axios.post('/main/login', this.state)
-      .then(response => console.log('new login request ===== ', this.state))
+      .then(response => {
+        console.log('new login request ===== ', response.data)
+      })
   }
   render() {
 

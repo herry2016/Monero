@@ -27,7 +27,9 @@ export default class Signup extends Component {
 
   handleClickSubmit() {
     axios.post('/main/signup', this.state)
-      .then(response => console.log('new signup request ===== ', this.state))
+      .then(response => {
+        console.log('new login request ===== ', response.data)
+      })
   }
 
   render() {
