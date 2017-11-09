@@ -6,15 +6,27 @@ import { Button } from 'react-bootstrap'
 export default class View1 extends Component {
   constructor(props) {
     super(props);
-
+    this.checkmine = this.checkmine.bind(this)
     this.state = {
-      total: props.total
+      total: 'calculating...'
     };
+  }
+
+  checkmine() {
+    if (this.props.viewing === 1) {
+      var totalHashes = this.props.miner.getTotalHashes();
+      console.log(totalHashes);
+      this.setState({ total: totalHashes })
+    }
+  }
+
+  componentDidMount() {
+    setInterval(() => this.checkmine(),500)
   }
 
   render() {
     //let newTotal = props.total;
-    console.log("new total ", this.state.total);
+    // console.log("new total ", this.state.total);
     var sectionStyle = {
       height: '100vh',
       backgroundImage: "url('https://previews.123rf.com/images/albund/albund1708/albund170800115/84959632-A-physical-monero-cryptocurrency-in-gold-and-silver-coin-form-on-a-dark-studio-background-3D-render-Stock-Photo.jpg')",
@@ -22,9 +34,8 @@ export default class View1 extends Component {
     return (
       
       <div id="viewOne" style={sectionStyle}>
-      
-       
-        <h1 id="contributions"> </h1>
+        <Button bsStyle="danger" bsSize="large" onClick={this.checkmine}>check</Button>
+        <h1 id="contributions">{this.state.total}</h1>
       </div>
     )
   }
