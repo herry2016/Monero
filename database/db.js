@@ -8,13 +8,13 @@ const db = new Sequelize('database', null, null, {
 
 const Users = db.define('users',{
     username: Sequelize.STRING,
-    total: Sequelize.STRING
+    password: Sequelize.STRING,
+    email: Sequelize.STRING,
+    total: Sequelize.STRING,
+    totalhashes: Sequelize.STRING,
+    totaltime: Sequelize.STRING,
+    totalamount: Sequelize.STRING
 })
-
-// db.create({
-//     username: 'test',
-//     total: '12345'
-// })
 
 Users.sync();
 exports.Users = Users;
