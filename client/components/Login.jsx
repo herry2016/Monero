@@ -25,6 +25,7 @@ export default class Login extends Component {
       .then(response => {
         console.log('new login request ===== ', response.data)
       })
+    this.props.handleClickViewChange(1);
   }
   render() {
 
