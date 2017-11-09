@@ -8,6 +8,7 @@ export default class View1 extends Component {
     super(props);
     this.checkmine = this.checkmine.bind(this)
     this.state = {
+      currentUser: 'default',
       total: 'calculating...'
     };
   }
