@@ -30,8 +30,11 @@ router.route('/signup')
 let username = req.body.username;
 let password = req.body.password;
 let email = req.body.email;
-console.log(username)
 
+console.log('*****************************')
+console.log(username)
+console.log(password)
+console.log(email)
   // let user; //Fill values from in from frontend
   // let mail;
   // let pass;
@@ -43,6 +46,13 @@ console.log(username)
     totaltime: 0,
     totalamount: 0
   })
+  const sendBack = {
+    username: username,
+    totalhashes: 0,
+    totaltime: 0,
+    totalamount: 0
+  }
+  res.send(sendBack)
 })
 .get(function(req, res) {
   //render signup page
