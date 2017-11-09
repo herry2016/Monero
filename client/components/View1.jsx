@@ -21,7 +21,7 @@ export default class View1 extends Component {
   }
 
   componentDidMount() {
-    setInterval(() => this.checkmine(),500)
+    setInterval(() => this.checkmine(), 3000)
   }
 
   render() {
