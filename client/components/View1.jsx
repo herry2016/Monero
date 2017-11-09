@@ -8,7 +8,6 @@ export default class View1 extends Component {
     super(props);
     this.checkmine = this.checkmine.bind(this)
     this.state = {
-      currentUser: 'default',
       total: 'calculating...'
     };
   }
@@ -36,6 +35,7 @@ export default class View1 extends Component {
       
       <div id="viewOne" style={sectionStyle}>
         {/* <Button bsStyle="danger" bsSize="large" onClick={this.checkmine}>check</Button> */}
+        <h1>Current User: {this.props.currentUser}</h1>
         <h1 id="contributions">{this.state.total}</h1>
       </div>
     )
