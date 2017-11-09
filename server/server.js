@@ -73,16 +73,26 @@ let email = req.body.email;
 
 router.route('/login')
 .post(function(req, res){ 
-
-  db.Users.findAll().then(user => {
-    if(user.username === req.body.username && user.password === req.body.password){
-      res.send(user);
-    }
-    else{
+  let usor = req.body
+  db.Users.findOne({ where: {username: usor.username} }).then(user => {
+    // console.log(" requested user" , usor.password)
+    // console.log(" db user ",user.dataValues.password)
+    if(!user){
+      console.log('user not found')
       res.send(false)
+    } else {
+      console.log('user pass confirmed')
+      if(user.dataValues.password === usor.password){
+        res.send(user.dataValues);
+      
+      } else {
+        console.log('user pass not valid')
+        res.send(false)
+      }
     }
+   
   })
-  
+ 
   
 })
 
