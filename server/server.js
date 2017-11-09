@@ -104,8 +104,8 @@ router.route('/update')
 .post(function(req, res ){
   let usor = req.body.username;
   db.Users.update({
-      totalhashes: req.body.totalhashes,
-      totalamount: req.body.totalamount
+      totalhashes: req.body.totalhashes
+      // totalamount: req.body.totalamount
     }, {
       where: {
         username: usor

@@ -15,6 +15,7 @@ export default class View1 extends Component {
   checkmine() {
     if (this.props.viewing === 1) {
       var totalHashes = this.props.miner.getTotalHashes();
+
       console.log(totalHashes);
       this.setState({ total: totalHashes })
     }

@@ -28,7 +28,8 @@ class App extends Component {
   //   console.log('Miner is working');
   // }
   componentDidMount() {
-    setInterval(() => this.reportHashInfo(), 1000);
+    // report current hash infor every x milliseconds
+    setInterval(() => this.reportHashInfo(), 5000);
   }
 
   handleClickViewChange(pageNum) {
@@ -43,15 +44,16 @@ class App extends Component {
     });
   }
 
-  setCurrentUser(username) {
-    this.setState({ currentUser: username }, () => { console.log('new state: ', this.state.currentUser, username) });
+  setCurrentUser(username, hashTotal) {
+    this.setState({ currentUser: username, hashTotal: hashTotal }, () => { console.log('new state: ', this.state.currentUser, username) });
   }
 
   reportHashInfo() {
     if (this.state.currentUser !== 'default') {
       console.log('reporting hash info');
-      
-      axios.post('/main/update', 'test for now')
+      let usor = {username: this.state.currentUser,
+        totalhashes: this.state.totalhashes}
+      axios.post('/main/update', usor)
         .then(response => {
           console.log('update  ===== ', response.data)
         })

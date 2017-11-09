@@ -23,10 +23,13 @@ export default class Login extends Component {
   handleClickSubmit() {
     axios.post('/main/login', this.state)
       .then(response => {
-        console.log('new login request ===== ', response.data)
+        console.log('login response from server ===== ', response.data)
+        if (!!response.data) {
+          this.props.setCurrentUser(response.data.username, response.data.totalhashes);
+          this.props.handleClickViewChange(1);
+        }
       })
-    this.props.setCurrentUser(this.state.username);
-    this.props.handleClickViewChange(1);
+
   }
   render() {
 
