@@ -1,14 +1,21 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import { Button } from 'react-bootstrap'
+import Leaderboard from './Leaderboard.jsx'
 
 
 export default class View2 extends Component {
   constructor(props) {
     super(props);
+    
+    this.testvalue = [
+      { username: 'jeff', totalhashes: 2 },
+      { username: 'jen', totalhashes: 100 },
+      { username: 'jay', totalhashes: 55 }
+    ]
 
     this.state = {
-
+      userList: this.testvalue
     };
   }
 
@@ -20,7 +27,7 @@ export default class View2 extends Component {
     return (
       <div id="viewTwo" style={sectionStyle}>
         <h2>Leaderboard</h2>
-        <div id="entries"></div>
+        <div id="entries"><Leaderboard userList={this.state.userList} /></div>
       </div>
     )
   }
