@@ -1,9 +1,9 @@
 const Sequelize = require('sequelize')
 const db = new Sequelize('database', null, null, {
     host: 'localhost',
-    dialect: 'mysql',
+    dialect: 'sqlite',
     // only if you  use sqlite
-    // storage: '../database/storage.sqlite'
+    storage: '../database/storage.sqlite'
 })
 
 const Users = db.define('users',{

@@ -6,7 +6,7 @@ const db = require('../database/db.js');
 const app = express();
 const router = express.Router();
 
-let port = 3306;
+let port = 9001;
 
 app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
