@@ -5,5 +5,3 @@ node_modules/
 bundle.js
 node_module
 *.sqlite
-storage.sqlite
-database/storage.sqlite
