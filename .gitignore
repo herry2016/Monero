@@ -3,4 +3,5 @@
 bower_components
 node_modules/
 bundle.js
-node_modules
+node_module
+storage.sqlite
