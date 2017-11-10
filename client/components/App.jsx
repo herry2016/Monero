@@ -15,7 +15,7 @@ class App extends Component {
       viewing: 1,
       hashTotal: 0,
       hashIncremented: 0,
-      hashCurrentUser: 0,
+      hashTotalCurrentUser: 0,
       start: false
     };
     this.handleClickViewChange = this.handleClickViewChange.bind(this)
@@ -56,10 +56,10 @@ class App extends Component {
     });
   }
 
-  setCurrentUser(username, hashTotal) {
+  setCurrentUser(username, hashTotalCurrentUser) {
     
-    console.log('set current user invoked, hashTotal', hashTotal)
-    this.setState({ currentUser: username },
+    console.log('set current user invoked, hashTotalCurrentUser', hashTotalCurrentUser)
+    this.setState({ currentUser: username, hashTotalCurrentUser: hashTotalCurrentUser },
       () => { console.log('new state: ', this.state.currentUser) });
   }
 
@@ -72,8 +72,9 @@ class App extends Component {
     axios.post('/main/update', usor)
       .then(response => {
         console.log('update  ===== ', response.data);
+        this.setState({ hashTotalCurrentUser: response.data.total})
       })
-    // this.minerReset()
+    this.minerReset()
   }
 
   minerReset() {
@@ -123,8 +124,12 @@ class App extends Component {
         </div>
         <div>
           <div></div>
-          {this.state.viewing === 1 ? <div><View1 miner={this.miner} viewing={this.state.viewing} 
-            currentUser = {this.state.currentUser}/></div> : null}
+          {this.state.viewing === 1 ? <div><View1 
+            miner={this.miner} 
+            viewing={this.state.viewing} 
+            currentUser = {this.state.currentUser}
+            hashTotalCurrentUser={this.state.hashTotalCurrentUser}
+            /></div> : null}
           {this.state.viewing === 2 ? <div><View2 hashTotal={this.state.hashTotal}/></div> : null}
           {this.state.viewing === 3 ? <div><Login 
             handleClickViewChange= {this.handleClickViewChange.bind(null)}

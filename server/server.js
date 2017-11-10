@@ -108,13 +108,7 @@ router.route('/update')
       console.log('this is the user in server update ', user.dataValues.totalhashes )
       console.log('this is the req hashes ', req.body.hashIncremented)
       total = user.dataValues.totalhashes + req.body.hashIncremented;
-      
-      console.log('total', total)
-      // 
-      console.log('total', total)
       res.send({ total: total });
-      // console.log(req)
-      // console.log('total  767676767676767767667====== ', total)
       db.Users.update({
         totalhashes: total
       }, {
@@ -124,8 +118,14 @@ router.route('/update')
       }
     );
   })
+})
 
-  
+router.route('/getAll')
+.get(function (req, res) {
+  db.Users.findAll().then(user => {
+    // console.log('all users ======',user);
+    res.send({ userList: user });
+  })
 })
 
 app.use('/main', router);
