@@ -103,12 +103,16 @@ router.route('/login')
 
 router.route('/update')
 .post(function(req, res ){
+  let total;
   db.Users.findOne({ where: { username: req.body.username} }).then(user => {
       console.log('this is the user in server update ', user.dataValues.totalhashes )
       console.log('this is the req hashes ', req.body.hashIncremented)
-      let total = user.dataValues.totalhashes + req.body.hashIncremented;
+      total = user.dataValues.totalhashes + req.body.hashIncremented;
+      
       console.log('total', total)
-      // res.send(total)
+      // 
+      console.log('total', total)
+      res.send({ total: total });
       // console.log(req)
       // console.log('total  767676767676767767667====== ', total)
       db.Users.update({
@@ -121,7 +125,7 @@ router.route('/update')
     );
   })
 
-
+  
 })
 
 app.use('/main', router);
