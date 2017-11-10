@@ -19,6 +19,7 @@ router.route('/signup')
     let username = req.body.username;
     let password = req.body.password;
     let email = req.body.email;
+    let org = req.body.org
 
     // console.log(username)
     // console.log(password)
