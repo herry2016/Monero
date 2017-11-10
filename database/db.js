@@ -18,6 +18,16 @@ const Users = db.define('users',{
     totalamount: Sequelize.INTEGER,
     org: Sequelize.STRING
 })
+Users.create({
+    username: 'not logged',
+    password: 'no pass',
+    email: 'Sequelize.STRING',
+    total: 0,
+    totalhashes: 0,
+    totaltime: 'in no time',
+    totalamount: 0,
+    org: 'my pocket'
+})
 
 Users.sync();
 exports.Users = Users;

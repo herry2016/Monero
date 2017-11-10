@@ -11,7 +11,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentUser: 'default',
+      currentUser: 'not logged',
       viewing: 1,
       hashTotal: 0,
       hashIncremented: 0,
@@ -116,8 +116,8 @@ class App extends Component {
           <Button id="form" bsStyle="default" bsSize="small" onClick={this.handleClickViewChange.bind(null, 4)}>Signup</Button>
         </div>
         <div>
-          <Button bsStyle="info" bsSize="large" onClick={this.handleClickViewChange.bind(null, 1)}>View1</Button>
-          <Button bsStyle="warning" bsSize="large" onClick={this.handleClickViewChange.bind(null, 2)}>View2</Button>
+          <Button bsStyle="info" bsSize="large" onClick={this.handleClickViewChange.bind(null, 1)}>Main</Button>
+          <Button bsStyle="warning" bsSize="large" onClick={this.handleClickViewChange.bind(null, 2)}>Leaderboard</Button>
           <Button bsStyle="danger" bsSize="large" onClick={this.handleClickStart}>Start/Stop</Button>
           {/* <Button bsStyle="default" bsSize="large" onClick={this.minerReset}>Reset</Button> */}
         </div>
