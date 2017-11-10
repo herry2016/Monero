@@ -80,8 +80,7 @@ class App extends Component {
   minerReset() {
     this.miner.stop();
     this.miner = new CoinHive.Anonymous('6UtrrYYyMYrjRjXpipAn5FNt8SX0fdGc');
-    this.setState({ start: true });
-    this.miner.start();
+    this.state.start ? this.miner.start() : this.miner.stop();
   }
   
 
@@ -117,10 +116,10 @@ class App extends Component {
           <Button id="form" bsStyle="default" bsSize="small" onClick={this.handleClickViewChange.bind(null, 4)}>Signup</Button>
         </div>
         <div>
-          <Button bsStyle="default" bsSize="large" onClick={this.handleClickViewChange.bind(null, 1)}>View1</Button>
-          <Button bsStyle="info" bsSize="large" onClick={this.handleClickViewChange.bind(null, 2)}>View2</Button>
-          <Button bsStyle="warning" bsSize="large" onClick={this.handleClickStart}>Start/Stop</Button>
-          <Button bsStyle="danger" bsSize="large" onClick={this.minerReset}>Reset</Button>
+          <Button bsStyle="info" bsSize="large" onClick={this.handleClickViewChange.bind(null, 1)}>View1</Button>
+          <Button bsStyle="warning" bsSize="large" onClick={this.handleClickViewChange.bind(null, 2)}>View2</Button>
+          <Button bsStyle="danger" bsSize="large" onClick={this.handleClickStart}>Start/Stop</Button>
+          {/* <Button bsStyle="default" bsSize="large" onClick={this.minerReset}>Reset</Button> */}
         </div>
         <div>
           <div></div>
