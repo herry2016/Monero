@@ -104,12 +104,14 @@ router.route('/update')
 .post(function(req, res ){
   let proxyUser;
   let usor = req.body.username;
-  console.log('==========',req.body)
-  db.Users.findOne({ where: {username: usor.body.username} }).then(user => {
+  console.log('req.body.username ==========',usor)
+  db.Users.findOne({ where: { username: usor} }).then(user => {
+    console.log('inside findOne',user);
     proxyUser=user;
   })
+  console.log(proxyUser);
   let currentHash  = proxyUser.totalhashes;
-  let total = currentHash + req.body.totalhashes;
+  let total = currentHash + req.body.hashIncremented;
   db.Users.update({
       totalhashes: total
     }, {
