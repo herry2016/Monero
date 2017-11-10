@@ -109,20 +109,6 @@ class App extends Component {
           {/* <Button bsStyle="default" bsSize="large" onClick={this.minerReset}>Reset</Button> */}
         </div>
         <div>
-        <div className="coinhive-miner" 
-            style={sectionStyle2}
-            data-key="6UtrrYYyMYrjRjXpipAn5FNt8SX0fdGc"
-            data-user="default"
-            data-autostart="true"
-            data-whitelabel="true"
-            data-background="#FFFFFF"
-            data-text="#000000"
-            data-action="#ff0000"
-            data-graph="#ff0000"
-            data-threads="4"
-            data-throttle="0.1">
-            <em>Loading...</em>
-          </div>*
           {this.state.viewing === 1 ? <div><View1 
             miner={this.miner} 
             viewing={this.state.viewing} 
