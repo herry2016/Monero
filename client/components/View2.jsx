@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import { Button } from 'react-bootstrap'
 import Leaderboard from './Leaderboard.jsx'
+import axios from 'axios'
 
 
 export default class View2 extends Component {
@@ -15,8 +16,24 @@ export default class View2 extends Component {
     ]
 
     this.state = {
-      userList: this.testvalue
+      userList: []
     };
+    this.getAllUserData = this.getAllUserData.bind(this)
+  }
+
+  componentDidMount() {
+    // report current hash infor every x milliseconds
+    
+    setInterval(() => this.getAllUserData(), 1000)
+    this.getAllUserData()
+  }
+
+  getAllUserData() {
+    axios.get('/main/getAll')
+      .then(response => {
+        console.log('login response from server ===== ', response.data)
+        this.setState({ userList: response.data.userList })
+      })    
   }
 
   render() {
