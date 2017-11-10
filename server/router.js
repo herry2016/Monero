@@ -42,7 +42,8 @@ router.route('/signup')
         email: email,
         totalhashes: 0,
         totaltime: 0,
-        totalamount: 0
+        totalamount: 0,
+        org:  org
       })
       let sendBack = {
         username: username,
