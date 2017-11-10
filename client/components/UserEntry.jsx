@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Row } from 'react-bootstrap'
+import { Col } from 'react-bootstrap'
 
 class UserEntry extends Component {
 
@@ -11,10 +13,12 @@ class UserEntry extends Component {
 
   render() {
     return (
-      <div>
-        <span>{this.props.user.username}</span>
-        <span>   {this.props.user.totalhashes}</span>
-      </div>
+      <Row>
+        <div>
+          <span>{this.props.user.username}</span>
+          <span> {this.props.user.totalhashes}</span>
+        </div>
+      </Row>
     )
   }
 }
