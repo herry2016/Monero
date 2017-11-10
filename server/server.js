@@ -7,8 +7,8 @@ const app = express();
 
 const router = require('./router.js');
 
-let port = 9001;
-// let port = 3306;
+// let port = 9001;
+let port = 3306;
 
 app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));

