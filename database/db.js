@@ -10,10 +10,10 @@ const Users = db.define('users',{
     username: Sequelize.STRING,
     password: Sequelize.STRING,
     email: Sequelize.STRING,
-    total: Sequelize.STRING,
-    totalhashes: Sequelize.STRING,
+    total: Sequelize.INTEGER,
+    totalhashes: Sequelize.INTEGER,
     totaltime: Sequelize.STRING,
-    totalamount: Sequelize.STRING
+    totalamount: Sequelize.INTEGER
 })
 
 Users.sync();
