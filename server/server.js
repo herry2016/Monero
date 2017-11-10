@@ -102,18 +102,23 @@ router.route('/login')
 
 router.route('/update')
 .post(function(req, res ){
+  let proxyUser;
   let usor = req.body.username;
   console.log('==========',req.body)
+  db.Users.findOne({ where: {username: usor.body.username} }).then(user => {
+    proxyUser=user;
+  })
+  let currentHash  = proxyUser.totalhashes;
+  let total = currentHash + req.body.totalhashes;
   db.Users.update({
-      totalhashes: req.body.totalhashes
-      // totalamount: req.body.totalamount
+      totalhashes: total
     }, {
       where: {
         username: usor
       }
     }
   );
-  res.send(req.body.totalhashes)
+  res.send(total)
 })
 
 app.use('/main', router);
