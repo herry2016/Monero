@@ -1,0 +1,102 @@
+[
+  {
+    "username": "timothy",
+    "password": "",
+    "email": "",
+    "total": 0,
+    "totalhashes": 50000,
+    "totaltime": "",
+    "totalamount": 0,
+    "org": ""
+  },
+  {
+    "username": "justin",
+    "password": "",
+    "email": "",
+    "total": 0,
+    "totalhashes": 50000,
+    "totaltime": "",
+    "totalamount": 0,
+    "org": ""
+  },
+  {
+    "username": "jeffrey",
+    "password": "",
+    "email": "mario@mushroomkingdom.com",
+    "total": 0,
+    "totalhashes": 10000,
+    "totaltime": "",
+    "totalamount": 0,
+    "org": ""
+  },
+  {
+    "username": "jen",
+    "password": "",
+    "email": "stompy@wompystompy.com",
+    "total": 0,
+    "totalhashes": 9000,
+    "totaltime": "",
+    "totalamount": 0,
+    "org": ""
+  },
+  {
+    "username": "dave chappelle",
+    "password": "",
+    "email": "tiger@hotmail.com",
+    "total": 0,
+    "totalhashes": 8000,
+    "totaltime": "",
+    "totalamount": 0,
+    "org": ""
+  },
+  {
+    "username": "Mason",
+    "password": "",
+    "email": "smokey@gmail.com",
+    "total": 0,
+    "totalhashes": 7000,
+    "totaltime": "",
+    "totalamount": 0,
+    "org": ""
+  },
+  {
+    "username": "Donald",
+    "password": "",
+    "email": "hello@bubtastic.com",
+    "total": 0,
+    "totalhashes": 6000,
+    "totaltime": "",
+    "totalamount": 0,
+    "org": ""
+  },
+  {
+    "username": "Trump",
+    "password": "",
+    "email": "misty@aol.com",
+    "total": 0,
+    "totalhashes": 5000,
+    "totaltime": "",
+    "totalamount": 0,
+    "org": ""
+  },
+  {
+    "username": "Sophia",
+    "password": "",
+    "email": "kitty@askjeeves.com",
+    "total": 0,
+    "totalhashes": 4000,
+    "totaltime": "",
+    "totalamount": 0,
+    "org": ""
+  },
+  {
+    "username": "Oscar",
+    "password": "",
+    "email": "oscar@gmail.com",
+    "total": 0,
+    "totalhashes": 3000,
+    "totaltime": "",
+    "totalamount": 0,
+    "org": ""
+  }
+]
