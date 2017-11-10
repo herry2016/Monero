@@ -15,8 +15,6 @@ app.use(parser.urlencoded({ extended: true }));
 app.use(express.static(path.resolve(__dirname, '../client')));
 
 
-
-
 app.use('/main', router);
 app.listen(port, () => {
   console.log('Server is running on port: ' + port)
