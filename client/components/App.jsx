@@ -40,7 +40,7 @@ class App extends Component {
   updateCurrentMine() {
     var hashTotal = this.miner.getTotalHashes();
     console.log('totalHashes', hashTotal);
-    this.setState({ hashTotal: hashTotal })
+    this.setState({ hashIncremented: hashTotal })
   }
 
   
@@ -65,15 +65,15 @@ class App extends Component {
 
   addHashEarnedToDB() {
     this.updateCurrentMine();
-    console.log(this.state)
+    // console.log(this.state)
     console.log('reporting hash info');
     let usor = {username: this.state.currentUser,
       hashIncremented: this.state.hashIncremented}
     axios.post('/main/update', usor)
-      // .then(response => {
-      //   console.log('update  ===== ', response.data);
-      // })
-    this.minerReset()
+      .then(response => {
+        console.log('update  ===== ', response.data);
+      })
+    // this.minerReset()
   }
 
   minerReset() {
