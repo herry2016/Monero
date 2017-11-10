@@ -103,6 +103,7 @@ router.route('/login')
 router.route('/update')
 .post(function(req, res ){
   let usor = req.body.username;
+  console.log('==========',req.body)
   db.Users.update({
       totalhashes: req.body.totalhashes
       // totalamount: req.body.totalamount
@@ -112,6 +113,7 @@ router.route('/update')
       }
     }
   );
+  res.send(req.body.totalhashes)
 })
 
 app.use('/main', router);

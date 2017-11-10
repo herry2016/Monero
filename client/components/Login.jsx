@@ -21,6 +21,7 @@ export default class Login extends Component {
   }
 
   handleClickSubmit() {
+    console.log('=========',this.state)
     axios.post('/main/login', this.state)
       .then(response => {
         console.log('login response from server ===== ', response.data)
