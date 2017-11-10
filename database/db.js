@@ -15,7 +15,8 @@ const Users = db.define('users',{
     total: Sequelize.INTEGER,
     totalhashes: Sequelize.INTEGER,
     totaltime: Sequelize.STRING,
-    totalamount: Sequelize.INTEGER
+    totalamount: Sequelize.INTEGER,
+    org: Sequelize.STRING
 })
 
 Users.sync();
