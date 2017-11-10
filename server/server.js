@@ -102,17 +102,13 @@ router.route('/login')
 
 router.route('/update')
 .post(function(req, res ){
-  let proxyUser;
-  let usor = req.body.username;
-  console.log('req.body.username ==========',usor)
-  db.Users.findOne({ where: { username: usor} }).then(user => {
-    console.log('inside findOne',user);
-    proxyUser=user;
-  })
-  console.log(proxyUser);
-  let currentHash  = proxyUser.totalhashes;
-  let total = currentHash + req.body.hashIncremented;
-  db.Users.update({
+
+db.Users.findOne({ where: { username: req.body.username} }).then(user => {
+    console.log('this is the user in server update ', user.dataValues.totalhashes )
+    console.log('this is the req hashes ', req.body.hashIncremented)
+    let total = user.dataValues.totalhashes + req.body.hashIncremented;
+    // console.log(req)
+    db.Users.update({
       totalhashes: total
     }, {
       where: {
@@ -120,7 +116,9 @@ router.route('/update')
       }
     }
   );
-  res.send(total)
+})
+res.send(total)
+
 })
 
 app.use('/main', router);
