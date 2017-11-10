@@ -108,11 +108,12 @@ db.Users.findOne({ where: { username: req.body.username} }).then(user => {
     console.log('this is the req hashes ', req.body.hashIncremented)
     let total = user.dataValues.totalhashes + req.body.hashIncremented;
     // console.log(req)
+    console.log('total  767676767676767767667====== ', total)
     db.Users.update({
       totalhashes: total
     }, {
       where: {
-        username: usor
+        username: req.body.username
       }
     }
   );
