@@ -5,6 +5,7 @@ import View1 from './View1.jsx'
 import View2 from './View2.jsx'
 import Login from './Login.jsx'
 import Signup from './Signup.jsx'
+import Chat from './Chat.jsx'
 import axios from 'axios'
 //test comment 
 class App extends Component {
@@ -106,6 +107,7 @@ class App extends Component {
           <Button bsStyle="info" bsSize="large" onClick={this.handleClickViewChange.bind(null, 1)}>Main</Button>
           <Button bsStyle="warning" bsSize="large" onClick={this.handleClickViewChange.bind(null, 2)}>Leaderboard</Button>
           <Button bsStyle="danger" bsSize="large" onClick={this.handleClickStart}>Start/Stop</Button>
+          <Button bsStyle="primary" bsSize="large" onClick={this.handleClickViewChange.bind(null, 5)}>Chat</Button>
           {/* <Button bsStyle="default" bsSize="large" onClick={this.minerReset}>Reset</Button> */}
         </div>
         <div>
@@ -120,6 +122,7 @@ class App extends Component {
             handleClickViewChange= {this.handleClickViewChange.bind(null)}
             setCurrentUser={this.setCurrentUser.bind(null)} /></div> : null}
           {this.state.viewing === 4 ? <div><Signup /></div> : null}
+          {this.state.viewing === 5 ? <div><Chat /></div> : null}
         </div>
       </div>
     )
