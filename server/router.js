@@ -8,7 +8,7 @@ router.get('/', function (req, res) {
 })
 
 router.use(function (req, res, next) {
-  console.log('Middleware router was ran');
+  // console.log('Middleware router was ran');
 
   next();
 });
@@ -95,8 +95,8 @@ router.route('/update')
   .post(function (req, res) {
     let total;
     db.Users.findOne({ where: { username: req.body.username } }).then(user => {
-      console.log('this is the user in server update ', user.dataValues.totalhashes)
-      console.log('this is the req hashes ', req.body.hashIncremented)
+      // console.log('this is the user in server update ', user.dataValues.totalhashes)
+      // console.log('this is the req hashes ', req.body.hashIncremented)
       total = user.dataValues.totalhashes + req.body.hashIncremented;
       res.send({ total: total });
       db.Users.update({

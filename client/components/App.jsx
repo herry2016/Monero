@@ -34,8 +34,8 @@ class App extends Component {
   // }
   componentDidMount() {
     // report current hash infor every x milliseconds
-    setInterval(() => this.updateCurrentMine(), 1000)
-    setInterval(() => this.addHashEarnedToDB(), 3000);
+    setInterval(() => this.updateCurrentMine(), 10000)
+    setInterval(() => this.addHashEarnedToDB(), 30000);
   }
 
   updateCurrentMine() {
@@ -122,7 +122,10 @@ class App extends Component {
             handleClickViewChange= {this.handleClickViewChange.bind(null)}
             setCurrentUser={this.setCurrentUser.bind(null)} /></div> : null}
           {this.state.viewing === 4 ? <div><Signup /></div> : null}
-          {this.state.viewing === 5 ? <div><Chat /></div> : null}
+          {this.state.viewing === 5 ? <div><Chat 
+            currentUser={this.state.currentUser}
+            hashTotalCurrentUser={this.state.hashTotalCurrentUser}
+          /></div> : null}
         </div>
       </div>
     )
