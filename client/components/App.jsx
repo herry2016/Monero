@@ -12,7 +12,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentUser: 'not logged',
+      currentUser: 'default',
       viewing: 1,
       hashTotal: 0,
       hashIncremented: 0,
@@ -34,8 +34,8 @@ class App extends Component {
   // }
   componentDidMount() {
     // report current hash infor every x milliseconds
-    setInterval(() => this.updateCurrentMine(), 10000)
-    setInterval(() => this.addHashEarnedToDB(), 30000);
+    setInterval(() => this.updateCurrentMine(), 1000)
+    setInterval(() => this.addHashEarnedToDB(), 3000);
   }
 
   updateCurrentMine() {
