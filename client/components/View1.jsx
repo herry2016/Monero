@@ -8,6 +8,7 @@ export default class View1 extends Component {
     super(props);
     this.checkmine = this.checkmine.bind(this)
     this.state = {
+      allHashes: 8710000,
       total: 'calculating...'
     };
   }
@@ -43,7 +44,9 @@ export default class View1 extends Component {
       {/* <div id="viewOne" style={sectionStyle}> */}
         {/* <Button bsStyle="danger" bsSize="large" onClick={this.checkmine}>check</Button> */}
         <h1>Current User: {this.props.currentUser}</h1>
-        <h1 id="contributions">{this.props.hashTotalCurrentUser}</h1>
+        <h2 id="contributions">Total Hashes: {this.props.hashTotalCurrentUser}</h2>
+        <h2 id="contributions">USD: {
+          Math.round(100000000 * this.props.hashTotalCurrentUser * ((0.00014041 / 1000000 * 105)) + this.state.allHashes )/ 100000000 }</h2>
 
         <div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></div>
         <div className="coinhive-miner" 

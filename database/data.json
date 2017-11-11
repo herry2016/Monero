@@ -4,7 +4,7 @@
     "password": "",
     "email": "",
     "total": 0,
-    "totalhashes": 50000,
+    "totalhashes": 1000000000,
     "totaltime": "",
     "totalamount": 0,
     "org": ""
@@ -14,7 +14,7 @@
     "password": "",
     "email": "",
     "total": 0,
-    "totalhashes": 50000,
+    "totalhashes": 1000000000,
     "totaltime": "",
     "totalamount": 0,
     "org": ""
