@@ -41,3 +41,7 @@
 #credentials{
   color: red;
 }
+#totalUSDRaised {
+  text-align: left;
+  margin-left: 300px;
+}
