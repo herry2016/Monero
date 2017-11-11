@@ -20,7 +20,7 @@
     "org": ""
   },
   {
-    "username": "jeffrey",
+    "username": "jeff",
     "password": "",
     "email": "mario@mushroomkingdom.com",
     "total": 0,
@@ -95,6 +95,16 @@
     "email": "oscar@gmail.com",
     "total": 0,
     "totalhashes": 3000,
+    "totaltime": "",
+    "totalamount": 0,
+    "org": ""
+  },
+  {
+    "username": "default",
+    "password": "",
+    "email": "",
+    "total": 0,
+    "totalhashes": 0,
     "totaltime": "",
     "totalamount": 0,
     "org": ""
