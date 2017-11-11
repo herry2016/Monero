@@ -9,7 +9,8 @@ export default class View1 extends Component {
     this.checkmine = this.checkmine.bind(this)
     this.state = {
       allHashes: 8710000,
-      total: 'calculating...'
+      total: 'calculating...',
+      roundDecimal: 1000000
     };
   }
 
@@ -30,7 +31,7 @@ export default class View1 extends Component {
     //let newTotal = props.total;
     // console.log("new total ", this.state.total);
     var sectionStyle = {
-      height: '100vh',
+      height: '80vh',
       backgroundImage: "url('https://darkwebnews.com/wp-content/uploads/2016/10/monero-cryptocurrency-in-gold-and-silver.jpg')",
     }
     var sectionStyle2 = {
@@ -40,15 +41,14 @@ export default class View1 extends Component {
     return (
       
       <div id="viewOne" style={sectionStyle}>
-
       {/* <div id="viewOne" style={sectionStyle}> */}
         {/* <Button bsStyle="danger" bsSize="large" onClick={this.checkmine}>check</Button> */}
         <h1>Current User: {this.props.currentUser}</h1>
         <h2 id="contributions">Total Hashes: {this.props.hashTotalCurrentUser}</h2>
         <h2 id="contributions">USD: {
-          Math.round(100000000 * this.props.hashTotalCurrentUser * ((0.00014041 / 1000000 * 105)) + this.state.allHashes )/ 100000000 }</h2>
-
-        <div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></div>
+          Math.round(100000000 * this.props.hashTotalCurrentUser * ((0.00014041 / 1000000 * 105)))/ 100000000 }</h2>
+        <div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></div>
+        <div id='totalUSDRaised'><h1>Total USD Raised: ${Math.round(100 * this.state.allHashes * ((0.00014041 / 1000000 * 105))) / 100}</h1></div>
         <div className="coinhive-miner" 
         style={sectionStyle2}
         data-key="6UtrrYYyMYrjRjXpipAn5FNt8SX0fdGc"
