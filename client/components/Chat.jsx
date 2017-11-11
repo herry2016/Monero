@@ -27,11 +27,11 @@ export default class Chat extends Component {
     const body = event.target.value
     if (event.keyCode === 13 && body) {
       const message = {
-        body,
-        from: 'Me'
+        body: body,
+        from: this.props.currentUser + '(' + this.props.hashTotalCurrentUser + ')'
       }
       this.setState({messages: [message, ...this.state.messages] })
-      this.socket.emit('message', body)
+      this.socket.emit('message', [message.from, message.body])
       event.target.value = ''
     }
   }
@@ -42,7 +42,7 @@ export default class Chat extends Component {
     })
     return (
       <div>
-        <h1>Chat Page</h1>
+        <h1>Current User: {this.props.currentUser}</h1>
         <input type='text' placeholder='Enter a message...' onKeyUp={this.handleSubmit} />
         {messages}
       </div>
