@@ -22,9 +22,10 @@ app.use(express.static(path.resolve(__dirname, '../client')));
 
 io.on('connection', socket =>{
   socket.on('message', body => {
-    socket.broudcast.emit('message', {
-      body,   // body: body
-        from: socket.id.slice(8)
+    //console.log(body)
+    socket.broadcast.emit('message', {
+      body: body,
+      from: socket.id.slice(8)
     })
   })
 })
