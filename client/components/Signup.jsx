@@ -50,9 +50,9 @@ export default class Signup extends Component {
             <div id="credentials"><label> Password: <input type="text" name="password" value={this.state.password} onChange={this.handleChange} /></label></div>
             <div id="credentials"><label> Email: <input type="text" name="email" value={this.state.email} onChange={this.handleChange} /></label></div>
             <span><DropdownButton title={'charity'} id={'charity'}>
-              <MenuItem onSelect={this.handleClickDropDown.bind(null, 'charity a')}>charity a</MenuItem>
-              <MenuItem onSelect={this.handleClickDropDown.bind(null, 'charity b')}>charity b</MenuItem>
-              <MenuItem onSelect={this.handleClickDropDown.bind(null, 'charity c')}>charity c</MenuItem>
+              <MenuItem onSelect={this.handleClickDropDown.bind(null, 'Red Cross')}>Red Cross</MenuItem>
+              <MenuItem onSelect={this.handleClickDropDown.bind(null, 'Unicef')}>Unicef</MenuItem>
+              <MenuItem onSelect={this.handleClickDropDown.bind(null, 'Hack Reactor')}>Hack Reactor</MenuItem>
             </DropdownButton></span>
             <span><input type="submit" value="Signup" onClick={this.handleClickSubmit} /></span>
           </FormGroup>

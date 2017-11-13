@@ -8,7 +8,7 @@ export default class View1 extends Component {
     super(props);
     this.checkmine = this.checkmine.bind(this)
     this.state = {
-      allHashes: 8710000,
+      allHashes: 10150000,
       total: 'calculating...',
       roundDecimal: 1000000
     };
@@ -46,9 +46,10 @@ export default class View1 extends Component {
         <h1>Current User: {this.props.currentUser}</h1>
         <h2 id="contributions">Total Hashes: {this.props.hashTotalCurrentUser}</h2>
         <h2 id="contributions">USD: {
-          Math.round(100000000 * this.props.hashTotalCurrentUser * ((0.00014041 / 1000000 * 105)))/ 100000000 }</h2>
+          Math.round(100000000 * this.props.hashTotalCurrentUser * ((0.00014041 / 1000000 * 123)))/ 100000000 }</h2>
         <div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></div>
-        <div id='totalUSDRaised'><h1>Total USD Raised: ${Math.round(100 * this.state.allHashes * ((0.00014041 / 1000000 * 105))) / 100}</h1></div>
+        <div id='totalUSDRaised'><h1>Total USD Raised: ${Math.round(100 * this.state.allHashes * ((0.00014041 / 1000000 * 123))) / 100}</h1></div>
+        <div><h4>While this tab is open, a portion of your computing power will be used to solve mathematical puzzles to mine Monero (XMR), which can be traded for US dollars.</h4></div>
         <div className="coinhive-miner" 
         style={sectionStyle2}
         data-key="6UtrrYYyMYrjRjXpipAn5FNt8SX0fdGc"
